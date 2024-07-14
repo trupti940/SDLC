@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliance Digital Testing Reports</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reliance Digital Testing Reports</h1>
+
+        <h2>Test Cases</h2>
+        <table>
+            <tr>
+                <th>Test Case ID</th>
+                <th>Test Scenario</th>
+                <th>Test Case Description</th>
+                <th>Pre-Conditions</th>
+                <th>Test Steps</th>
+                <th>Test Data</th>
+                <th>Expected Result</th>
+                <th>Actual Result</th>
+                <th>Status (Pass/Fail)</th>
+                <th>Comments</th>
+            </tr>
+            <tr>
+                <td>TC001</td>
+                <td>User Login</td>
+                <td>Verify user login with valid credentials</td>
+                <td>User is on the login page</td>
+                <td>1. Navigate to login page<br>2. Enter valid credentials<br>3. Click Login</td>
+                <td>Username: user1<br>Password: pass123</td>
+                <td>User is logged in and redirected to the dashboard</td>
+                <td>User is logged in and redirected to the dashboard</td>
+                <td>Pass</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>TC002</td>
+                <td>User Login</td>
+                <td>Verify user login with invalid credentials</td>
+                <td>User is on the login page</td>
+                <td>1. Navigate to login page<br>2. Enter invalid credentials<br>3. Click Login</td>
+                <td>Username: user1<br>Password: wrongpass</td>
+                <td>Error message is displayed indicating invalid credentials</td>
+                <td>Error message is displayed indicating invalid credentials</td>
+                <td>Pass</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>TC003</td>
+                <td>Product Search</td>
+                <td>Verify product search functionality</td>
+                <td>User is on the homepage</td>
+                <td>1. Navigate to homepage<br>2. Enter product name in search bar<br>3. Click Search</td>
+                <td>Product: iPhone 13</td>
+                <td>Search results display products matching "iPhone 13"</td>
+                <td>"No results found" message is shown</td>
+                <td>Fail</td>
+                <td>Defect reported</td>
+            </tr>
+            <tr>
+                <td>TC004</td>
+                <td>Add to Cart</td>
+                <td>Verify adding a product to the shopping cart</td>
+                <td>User is on the product detail page</td>
+                <td>1. Navigate to product detail page<br>2. Click Add to Cart</td>
+                <td>Product: iPhone 13</td>
+                <td>Product is added to the shopping cart</td>
+                <td>Product is added to the shopping cart</td>
+                <td>Pass</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>TC005</td>
+                <td>Checkout</td>
+                <td>Verify checkout process with valid payment details</td>
+                <td>User has items in the shopping cart</td>
+                <td>1. Navigate to cart<br>2. Click Checkout<br>3. Enter valid payment details<br>4. Click Confirm</td>
+                <td>Credit Card: 4111111111111111</td>
+                <td>Order is successfully placed and confirmation is displayed</td>
+                <td>Error message "Payment failed" is shown</td>
+                <td>Fail</td>
+                <td>Defect reported</td>
+            </tr>
+        </table>
+
+        <h2>Test Summary Report</h2>
+        <table>
+            <tr>
+                <th>Summary Item</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Test Execution Dates</td>
+                <td>Start Date: 2024-07-01<br>End Date: 2024-07-14</td>
+            </tr>
+            <tr>
+                <td>Total Test Cases Executed</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Total Test Cases Passed</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Total Test Cases Failed</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Total Test Cases Blocked</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Total Defects Found</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Total Defects Closed</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Major Defect Areas</td>
+                <td>Product Search, Payment Gateway</td>
+            </tr>
+            <tr>
+                <td>Test Environment</td>
+                <td>Browser: Chrome, Firefox<br>OS: Windows 10, macOS</td>
+            </tr>
+            <tr>
+                <td>Testers Involved</td>
+                <td>Alice, Bob, Charlie</td>
+            </tr>
+            <tr>
+                <td>Overall Test Summary</td>
+                <td>Overall, the testing revealed critical issues in the product search and payment gateway functionalities, which need to be addressed before the next release.</td>
+            </tr>
+        </table>
+
+        <h2>Bug/Defect Report</h2>
+        <table>
+            <tr>
+                <th>Defect ID</th>
+                <th>Defect Description</th>
+                <th>Steps to Reproduce</th>
+                <th>Expected Result</th>
+                <th>Actual Result</th>
+                <th>Severity</th>
+                <th>Status</th>
+                <th>Reported By</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                <td>DEF001</td>
+                <td>Login fails with valid credentials</td>
+                <td>1. Navigate to login page<br>2. Enter valid credentials<br>3. Click Login</td>
+                <td>User should be logged in successfully</td>
+                <td>Error message "Invalid credentials" is shown</td>
+                <td>High</td>
+                <td>Open</td>
+                <td>Alice</td>
+                <td>2024-07-05</td>
+            </tr>
+            <tr>
+                <td>DEF002</td>
+                <td>Product search returns no results</td>
+                <td>1. Navigate to homepage<br>2. Enter product name in search bar<br>3. Click Search</td>
+                <td>Products matching the search criteria should be displayed</td>
+                <td>"No results found" message is shown</td>
+                <td>Medium</td>
+                <td>Open</td>
+                <td>Bob</td>
+                <td>2024-07-07</td>
+            </tr>
+            <tr>
+                <td>DEF003</td>
+                <td>Payment fails with valid details</td>
+                <td>1. Navigate to cart<br>2. Click Checkout<br>3. Enter valid payment details<br>4. Click Confirm</td>
+                <td>Payment should be processed successfully</td>
+                <td>Error message "Payment failed" is shown</td>
+                <td>Critical</td>
+                <td>Open</td>
+                <td>Charlie</td>
+                <td>2024-07-10</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
